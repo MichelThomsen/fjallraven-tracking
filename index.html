@@ -4,7 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Fjällräven Classic Danmark 2026 — Tracking</title>
-  <link rel="manifest" href="manifest.json" />
+  <link rel="manifest" href="manifest.json" id="app-manifest" />
+  <script>
+    // Skift til checkpoint-manifest FØR browseren registrerer install-prompt
+    if (location.search.includes('role=checkpoint')) {
+      document.getElementById('app-manifest').href = 'manifest-checkpoint.json';
+    }
+  </script>
   <link rel="apple-touch-icon" href="icon.svg" />
   <meta name="theme-color" content="#1C2B18" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
