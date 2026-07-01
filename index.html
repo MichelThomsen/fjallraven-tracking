@@ -1064,6 +1064,14 @@
       document.getElementById('user-form').style.display = 'none';
       document.getElementById('statusbar').style.display  = 'none';
 
+      // Flyt install-knap ind i cp-header så den ikke dækker tabellen
+      const installBtn = document.getElementById('install-btn');
+      installBtn.style.position = 'static';
+      installBtn.style.margin = '10px 0 0 0';
+      installBtn.style.width = '100%';
+      installBtn.style.justifyContent = 'center';
+      document.getElementById('cp-header').appendChild(installBtn);
+
       const panel = document.getElementById('checkpoint-panel');
       panel.classList.add('visible');
       document.getElementById('cp-session-label').textContent = SESSION_ID;
