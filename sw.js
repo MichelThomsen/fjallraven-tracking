@@ -1,4 +1,4 @@
-const CACHE = 'fjallraven-v1';
+const CACHE = 'fjallraven-v2';
 const SHELL = ['./index.html', './Fjallraven_Classic_Danmark_2026.kml', './icon.svg', './manifest.json'];
 
 self.addEventListener('install', e => {
